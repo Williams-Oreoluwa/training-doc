@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professionalism and Ethics for Drivers - Training Presentation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .presentation-container {
+            width: 90%;
+            max-width: 1000px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .slide {
+            display: none;
+            padding: 40px;
+            min-height: 600px;
+            position: relative;
+            animation: slideIn 0.5s ease-in-out;
+        }
+        
+        .slide.active {
+            display: block;
+        }
+        
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(20px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        
+        .slide h1 {
+            color: #2c3e50;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-align: center;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 15px;
+        }
+        
+        .slide h2 {
+            color: #34495e;
+            font-size: 2em;
+            margin: 25px 0 15px 0;
+            border-left: 5px solid #e74c3c;
+            padding-left: 15px;
+        }
+        
+        .slide h3 {
+            color: #2980b9;
+            font-size: 1.4em;
+            margin: 20px 0 10px 0;
+        }
+        
+        .slide p, .slide li {
+            font-size: 1.1em;
+            line-height: 1.6;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .slide ul {
+            margin-left: 25px;
+            margin-bottom: 20px;
+        }
+        
+        .slide li {
+            margin-bottom: 8px;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+        
+        .info-box {
+            background: #ecf0f1;
+            border: 2px solid #3498db;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        
+        .warning-box {
+            background: #fff3cd;
+            border: 2px solid #ffc107;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        
+        .success-box {
+            background: #d4edda;
+            border: 2px solid #28a745;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        
+        .navigation {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+        }
+        
+        .nav-btn {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-btn:hover {
+            background: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .nav-btn:disabled {
+            background: #bdc3c7;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .slide-counter {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+        
+        .title-slide {
+            text-align: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .title-slide h1 {
+            color: white;
+            border-bottom: 3px solid white;
+        }
+        
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 20px;
+        }
+        
+        .scenario-box {
+            background: #f8f9fa;
+            border: 2px solid #6c757d;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 15px 0;
+        }
+        
+        .scenario-box h4 {
+            color: #495057;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+        
+        .checklist {
+            background: #e8f5e8;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        
+        .checklist ul {
+            list-style: none;
+            margin-left: 0;
+        }
+        
+        .checklist li {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 10px;
+        }
+        
+        .checklist li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #28a745;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation-container">
+        <!-- Slide 1: Title Slide -->
+        <div class="slide active title-slide">
+            <h1>Professionalism and Ethics for Drivers</h1>
+            <p style="font-size: 1.4em; margin: 30px 0;">Building Excellence in the Workplace</p>
+            <div style="margin-top: 60px;">
+                <p><strong>Training Objectives:</strong></p>
+                <ul style="text-align: left; margin-top: 20px; font-size: 1.2em;">
+                    <li>Understand professional standards for workplace drivers</li>
+                    <li>Learn ethical decision-making principles</li>
+                    <li>Develop positive workplace relationships</li>
+                    <li>Ensure safety and legal compliance</li>
+                    <li>Represent your organization with pride</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Slide 2: What is Professionalism? -->
+        <div class="slide">
+            <h1>What is Professionalism?</h1>
+            
+            <div class="highlight-box">
+                Professionalism is the conduct, behavior, and attitude that demonstrates competence, reliability, and respect in the workplace.
+            </div>
+            
+            <h2>Key Components of Professional Driving</h2>
+            <ul>
+                <li><strong>Competence:</strong> Having the skills and knowledge to perform your job safely and effectively</li>
+                <li><strong>Reliability:</strong> Being dependable and consistent in your performance</li>
+                <li><strong>Integrity:</strong> Acting honestly and ethically in all situations</li>
+                <li><strong>Respect:</strong> Treating colleagues, passengers, and the public with courtesy</li>
+                <li><strong>Accountability:</strong> Taking responsibility for your actions and decisions</li>
+            </ul>
+            
+            <div class="info-box">
+                <strong>Remember:</strong> As a professional driver, you are often the first point of contact between your organization and the public. Your behavior reflects on the entire company.
+            </div>
+        </div>
+
+        <!-- Slide 3: Professional Appearance and Conduct -->
+        <div class="slide">
+            <h1>Professional Appearance and Conduct</h1>
+            
+            <div class="two-column">
+                <div>
+                    <h3>Personal Appearance</h3>
+                    <div class="checklist">
+                        <ul>
+                            <li>Clean, well-maintained uniform</li>
+                            <li>Proper grooming and hygiene</li>
+                            <li>Company identification visible</li>
+                            <li>Appropriate footwear</li>
+                            <li>Professional demeanor</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3>Vehicle Appearance</h3>
+                    <div class="checklist">
+                        <ul>
+                            <li>Clean interior and exterior</li>
+                            <li>No personal items visible</li>
+                            <li>Company logos/branding visible</li>
+                            <li>Proper maintenance records</li>
+                            <li>Safety equipment accessible</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <h2>Professional Conduct Guidelines</h2>
+            <ul>
+                <li>Arrive on time and prepared for work</li>
+                <li>Follow company policies and procedures</li>
+                <li>Communicate clearly and respectfully</li>
+                <li>Maintain confidentiality when required</li>
+                <li>Report incidents and concerns promptly</li>
+            </ul>
+        </div>
+
+        <!-- Slide 4: Ethics in the Workplace -->
+        <div class="slide">
+            <h1>Ethics in the Workplace</h1>
+            
+            <div class="highlight-box">
+                Ethics are moral principles that guide behavior and decision-making, helping us distinguish between right and wrong.
+            </div>
+            
+            <h2>Core Ethical Principles for Drivers</h2>
+            
+            <h3>1. Honesty and Integrity</h3>
+            <ul>
+                <li>Report accidents and incidents truthfully</li>
+                <li>Accurate completion of logbooks and reports</li>
+                <li>Honest use of company resources</li>
+                <li>Transparent communication with supervisors</li>
+            </ul>
+            
+            <h3>2. Respect for Others</h3>
+            <ul>
+                <li>Courteous treatment of all passengers</li>
+                <li>Respect for pedestrians and other drivers</li>
+                <li>Professional interaction with colleagues</li>
+                <li>Cultural sensitivity and inclusiveness</li>
+            </ul>
+            
+            <h3>3. Responsibility and Accountability</h3>
+            <ul>
+                <li>Taking ownership of mistakes</li>
+                <li>Following safety procedures</li>
+                <li>Protecting company assets</li>
+                <li>Continuous learning and improvement</li>
+            </ul>
+        </div>
+
+        <!-- Slide 5: Ethical Decision Making -->
+        <div class="slide">
+            <h1>Ethical Decision Making</h1>
+            
+            <h2>The ETHICS Framework</h2>
+            <div class="info-box">
+                <p><strong>E</strong> - Evaluate the situation</p>
+                <p><strong>T</strong> - Think about consequences</p>
+                <p><strong>H</strong> - Honor company values</p>
+                <p><strong>I</strong> - Identify stakeholders affected</p>
+                <p><strong>C</strong> - Consider alternatives</p>
+                <p><strong>S</strong> - Select the best course of action</p>
+            </div>
+            
+            <h2>Key Questions to Ask Yourself</h2>
+            <ul>
+                <li>Is this action legal and compliant with company policy?</li>
+                <li>Would I be comfortable if this decision were made public?</li>
+                <li>How would this affect passengers, colleagues, and the company?</li>
+                <li>What would happen if everyone made this same decision?</li>
+                <li>Does this align with my personal and professional values?</li>
+            </ul>
+            
+            <div class="warning-box">
+                <strong>When in doubt, ask!</strong> Consult your supervisor or company ethics hotline before making difficult decisions.
+            </div>
+        </div>
+
+        <!-- Slide 6: Common Ethical Scenarios -->
+        <div class="slide">
+            <h1>Common Ethical Scenarios</h1>
+            
+            <div class="scenario-box">
+                <h4>Scenario 1: Personal Use of Company Vehicle</h4>
+                <p>You need to make a quick personal stop while driving a company vehicle. Is this acceptable?</p>
+                <div class="success-box">
+                    <strong>Ethical Response:</strong> Only if explicitly permitted by company policy. When in doubt, ask permission first.
+                </div>
+            </div>
+            
+            <div class="scenario-box">
+                <h4>Scenario 2: Passenger Offers a Tip</h4>
+                <p>A passenger offers you money as a tip for excellent service. Should you accept it?</p>
+                <div class="success-box">
+                    <strong>Ethical Response:</strong> Follow company policy. If tipping is prohibited, politely decline and explain company policy.
+                </div>
+            </div>
+            
+            <div class="scenario-box">
+                <h4>Scenario 3: Witnessing Colleague's Unsafe Behavior</h4>
+                <p>You observe a fellow driver consistently speeding or violating safety rules. What should you do?</p>
+                <div class="success-box">
+                    <strong>Ethical Response:</strong> Report the behavior to supervision. Safety concerns must be addressed promptly.
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 7: Communication and Customer Service -->
+        <div class="slide">
+            <h1>Professional Communication</h1>
+            
+            <h2>Effective Communication Skills</h2>
+            <div class="two-column">
+                <div>
+                    <h3>Verbal Communication</h3>
+                    <ul>
+                        <li>Speak clearly and calmly</li>
+                        <li>Use appropriate language</li>
+                        <li>Listen actively</li>
+                        <li>Ask clarifying questions</li>
+                        <li>Provide helpful information</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3>Non-Verbal Communication</h3>
+                    <ul>
+                        <li>Maintain professional posture</li>
+                        <li>Make appropriate eye contact</li>
+                        <li>Use open body language</li>
+                        <li>Control facial expressions</li>
+                        <li>Respect personal space</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <h2>Customer Service Excellence</h2>
+            <div class="highlight-box">
+                Every interaction is an opportunity to create a positive impression of your organization.
+            </div>
+            
+            <ul>
+                <li>Greet passengers and colleagues warmly</li>
+                <li>Be helpful and accommodating within policy limits</li>
+                <li>Handle complaints professionally and calmly</li>
+                <li>Follow up on concerns when appropriate</li>
+                <li>Thank people for their business or cooperation</li>
+            </ul>
+        </div>
+
+        <!-- Slide 8: Safety and Legal Compliance -->
+        <div class="slide">
+            <h1>Safety and Legal Compliance</h1>
+            
+            <h2>Professional Driver Responsibilities</h2>
+            
+            <h3>Legal Compliance</h3>
+            <ul>
+                <li>Valid driver's license and endorsements</li>
+                <li>Current medical certifications (if required)</li>
+                <li>Compliance with hours of service regulations</li>
+                <li>Proper vehicle documentation</li>
+                <li>Understanding of traffic laws and regulations</li>
+            </ul>
+            
+            <h3>Safety First Approach</h3>
+            <div class="warning-box">
+                <p><strong>Zero Tolerance:</strong></p>
+                <ul>
+                    <li>No alcohol or drug use</li>
+                    <li>No distracted driving (phones, texting)</li>
+                    <li>No aggressive or reckless driving</li>
+                    <li>No shortcuts with safety procedures</li>
+                </ul>
+            </div>
+            
+            <h3>Daily Safety Practices</h3>
+            <ul>
+                <li>Pre-trip vehicle inspections</li>
+                <li>Use of seatbelts and safety equipment</li>
+                <li>Defensive driving techniques</li>
+                <li>Weather and road condition awareness</li>
+                <li>Emergency procedure knowledge</li>
+            </ul>
+        </div>
+
+        <!-- Slide 9: Confidentiality and Privacy -->
+        <div class="slide">
+            <h1>Confidentiality and Privacy</h1>
+            
+            <div class="highlight-box">
+                Professional drivers often have access to confidential information about passengers, cargo, and company operations.
+            </div>
+            
+            <h2>Types of Confidential Information</h2>
+            <ul>
+                <li>Passenger personal information and conversations</li>
+                <li>Company business strategies and operations</li>
+                <li>Client information and business relationships</li>
+                <li>Route information and security procedures</li>
+                <li>Financial information and transactions</li>
+            </ul>
+            
+            <h2>Maintaining Confidentiality</h2>
+            <div class="info-box">
+                <h3>Do's:</h3>
+                <ul>
+                    <li>Keep sensitive information to yourself</li>
+                    <li>Secure documents and electronic devices</li>
+                    <li>Report security breaches immediately</li>
+                    <li>Follow company data protection policies</li>
+                    <li>Respect passenger privacy</li>
+                </ul>
+            </div>
+            
+            <div class="warning-box">
+                <h3>Don'ts:</h3>
+                <ul>
+                    <li>Discuss confidential matters with unauthorized persons</li>
+                    <li>Use company information for personal gain</li>
+                    <li>Leave sensitive materials unsecured</li>
+                    <li>Share passenger information unnecessarily</li>
+                    <li>Post company information on social media</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Slide 10: Handling Difficult Situations -->
+        <div class="slide">
+            <h1>Handling Difficult Situations</h1>
+            
+            <h2>De-escalation Techniques</h2>
+            <div class="two-column">
+                <div>
+                    <h3>Remain Calm</h3>
+                    <ul>
+                        <li>Control your emotions</li>
+                        <li>Speak in a calm, steady voice</li>
+                        <li>Take deep breaths</li>
+                        <li>Maintain professional demeanor</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3>Active Listening</h3>
+                    <ul>
+                        <li>Let the person express concerns</li>
+                        <li>Acknowledge their feelings</li>
+                        <li>Ask clarifying questions</li>
+                        <li>Summarize their concerns</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <h2>Problem-Solving Steps</h2>
+            <ol>
+                <li><strong>Listen:</strong> Understand the issue completely</li>
+                <li><strong>Empathize:</strong> Show that you care about their concern</li>
+                <li><strong>Apologize:</strong> If appropriate, apologize for the inconvenience</li>
+                <li><strong>Solve:</strong> Offer solutions within your authority</li>
+                <li><strong>Follow-up:</strong> Ensure the solution is satisfactory</li>
+            </ol>
+            
+            <div class="warning-box">
+                <strong>Know Your Limits:</strong> When a situation escalates beyond your ability to handle, contact your supervisor or security immediately. Never compromise safety for customer service.
+            </div>
+        </div>
+
+        <!-- Slide 11: Social Media and Public Image -->
+        <div class="slide">
+            <h1>Social Media and Public Image</h1>
+            
+            <div class="highlight-box">
+                Your online presence and public behavior reflect on your employer, even outside of work hours.
+            </div>
+            
+            <h2>Social Media Guidelines</h2>
+            
+            <h3>Think Before You Post</h3>
+            <ul>
+                <li>Avoid posting company-related content without permission</li>
+                <li>Don't share photos of vehicles, passengers, or workplaces</li>
+                <li>Keep personal opinions separate from professional identity</li>
+                <li>Respect confidentiality even on personal accounts</li>
+                <li>Consider how posts might be perceived by employers or clients</li>
+            </ul>
+            
+            <h3>Professional Online Presence</h3>
+            <div class="info-box">
+                <ul>
+                    <li>Use privacy settings appropriately</li>
+                    <li>Keep profile information professional</li>
+                    <li>Think twice before tagging location or company</li>
+                    <li>Avoid controversial or offensive content</li>
+                    <li>Report any online harassment or threats</li>
+                </ul>
+            </div>
+            
+            <h2>Public Behavior</h2>
+            <p>Remember that you may be recognized as a company employee even when off duty. Always maintain professional standards in public, especially when wearing company uniforms or driving company vehicles.</p>
+        </div>
+
+        <!-- Slide 12: Continuous Improvement -->
+        <div class="slide">
+            <h1>Continuous Professional Development</h1>
+            
+            <h2>Building Your Professional Skills</h2>
+            
+            <h3>Training and Education</h3>
+            <ul>
+                <li>Attend required safety and skills training</li>
+                <li>Stay updated on traffic laws and regulations</li>
+                <li>Participate in company training programs</li>
+                <li>Seek additional certifications and endorsements</li>
+                <li>Learn from experienced colleagues and mentors</li>
+            </ul>
+            
+            <h3>Self-Assessment and Feedback</h3>
+            <div class="checklist">
+                <ul>
+                    <li>Regularly evaluate your performance</li>
+                    <li>Seek feedback from supervisors and peers</li>
+                    <li>Set personal improvement goals</li>
+                    <li>Document your achievements and challenges</li>
+                    <li>Celebrate successes and learn from mistakes</li>
+                </ul>
+            </div>
+            
+            <h2>Career Advancement</h2>
+            <p>Professional behavior and ethical conduct are essential for career growth. Drivers who demonstrate these qualities often advance to:</p>
+            <ul>
+                <li>Senior driver positions</li>
+                <li>Training and mentoring roles</li>
+                <li>Supervisory positions</li>
+                <li>Safety and compliance roles</li>
+                <li>Fleet management opportunities</li>
+            </ul>
+        </div>
+
+        <!-- Slide 13: Company Policies and Procedures -->
+        <div class="slide">
+            <h1>Understanding Company Policies</h1>
+            
+            <h2>Key Policy Areas</h2>
+            
+            <div class="two-column">
+                <div>
+                    <h3>Safety Policies</h3>
+                    <ul>
+                        <li>Vehicle operation procedures</li>
+                        <li>Accident reporting requirements</li>
+                        <li>Personal protective equipment</li>
+                        <li>Emergency response procedures</li>
+                        <li>Maintenance and inspection schedules</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3>Conduct Policies</h3>
+                    <ul>
+                        <li>Professional behavior standards</li>
+                        <li>Attendance and punctuality</li>
+                        <li>Uniform and appearance requirements</li>
+                        <li>Communication guidelines</li>
+                        <li>Disciplinary procedures</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="info-box">
+                <h3>Your Responsibilities:</h3>
+                <ul>
+                    <li>Read and understand all company policies</li>
+                    <li>Ask questions if anything is unclear</li>
+                    <li>Follow policies consistently</li>
+                    <li>Report policy violations</li>
+                    <li>Stay informed about policy updates</li>
+                </ul>
+            </div>
+            
+            <div class="warning-box">
+                <strong>Remember:</strong> Ignorance of company policy is not an acceptable excuse. It's your responsibility to stay informed and compliant.
+            </div>
+        </div>
+
+        <!-- Slide 14: Action Plan and Commitment -->
+        <div class="slide">
+            <h1>Your Professional Action Plan</h1>
+            
+            <h2>Personal Commitment to Excellence</h2>
+            <div class="highlight-box">
+                Professional driving is more than just moving from point A to point B. It's about representing your organization with pride and integrity every day.
+            </div>
+            
+            <h2>30-Day Action Plan</h2>
+            <div class="checklist">
+                <h3>Week 1: Foundation</h3>
+                <ul>
+                    <li>Review all company policies and procedures</li>
+                    <li>Assess current professional practices</li>
+                    <li>Identify areas for improvement</li>
+                    <li>Set specific professional goals</li>
+                </ul>
+                
+                <h3>Week 2: Implementation</h3>
+                <ul>
+                    <li>Practice new communication techniques</li>
+                    <li>Focus on professional appearance</li>
+                    <li>Implement safety improvements</li>
+                    <li>Seek feedback from supervisors</li>
+                </ul>
+                
+                <h3>Week 3: Refinement</h3>
+                <ul>
+                    <li>Address any identified weaknesses</li>
+                    <li>Continue building positive relationships</li>
+                    <li>Document progress and challenges</li>
+                    <li>Share knowledge with colleagues</li>
+                </ul>
+                
+                <h3>Week 4: Evaluation</h3>
+                <ul>
+                    <li>Evaluate progress against goals</li>
+                    <li>Celebrate achievements</li>
+                    <li>Plan for continued improvement</li>
+                    <li>Commit to ongoing professional development</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Slide 15: Summary and Key Takeaways -->
+        <div class="slide">
+            <h1>Key Takeaways</h1>
+            
+            <div class="highlight-box">
+                <h2>Remember: You are a Professional</h2>
+                <p>Every action you take reflects on yourself, your colleagues, and your organization.</p>
+            </div>
+            
+            <h2>Five Pillars of Professional Driving</h2>
+            <div class="two-column">
+                <div>
+                    <div class="success-box">
+                        <h3>1. Safety First</h3>
+                        <p>Always prioritize safety in every decision and action.</p>
+                    </div>
+                    
+                    <div class="success-box">
+                        <h3>2. Ethical Conduct</h3>
+                        <p>Make decisions based on honesty, integrity, and respect.</p>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="success-box">
+                        <h3>3. Professional Appearance</h3>
+                        <p>Present yourself and your vehicle professionally at all times.</p>
+                    </div>
+                    
+                    <div class="success-box">
+                        <h3>4. Excellent Service</h3>
+                        <p>Treat every passenger and colleague with respect and courtesy.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="success-box">
+                <h3>5. Continuous Improvement</h3>
+                <p>Commit to ongoing learning and professional development.</p>
+            </div>
+            
+            <div class="info-box">
+                <h3>Questions for Reflection:</h3>
+                <ul>
+                    <li>How will you apply these principles in your daily work?</li>
+                    <li>What specific changes will you make to improve your professionalism?</li>
+                    <li>How will you contribute to a positive workplace culture?</li>
+                </ul>
+            </div>
+            
+            <div style="text-align: center; margin-top: 40px;">
+                <h2>Thank You for Your Commitment to Excellence!</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide-counter">
+        <span id="currentSlide">1</span> / <span id="totalSlides">15</span>
+    </div>
+
+    <div class="navigation">
+        <button class="nav-btn" id="prevBtn" onclick="changeSlide(-1)">Previous</button>
+        <button class="nav-btn" id="nextBtn" onclick="changeSlide(1)">Next</button>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        
+        document.getElementById('totalSlides').textContent = totalSlides;
+        
+        function showSlide(n) {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (n + totalSlides) % totalSlides;
+            slides[currentSlide].classList.add('active');
+            
+            document.getElementById('currentSlide').textContent = currentSlide + 1;
+            
+            // Update navigation buttons
+            document.getElementById('prevBtn').disabled = currentSlide === 0;
+            document.getElementById('nextBtn').disabled = currentSlide === totalSlides - 1;
+        }
+        
+        function changeSlide(n) {
+            if (n === 1 && currentSlide < totalSlides - 1) {
+                showSlide(currentSlide + 1);
+            } else if (n === -1 && currentSlide > 0) {
+                showSlide(currentSlide - 1);
+            }
+        }
+        
+        // Keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowLeft') changeSlide(-1);
+            if (e.key === 'ArrowRight') changeSlide(1);
+        });
+        
+        // Initialize
+        showSlide(0);
+        
+        // Auto-advance slides (optional - can be enabled for presentations)
+        function startAutoAdvance(intervalSeconds = 30) {
+            setInterval(function() {
+                if (currentSlide < totalSlides - 1) {
+                    changeSlide(1);
+                }
+            }, intervalSeconds * 1000);
+        }
+        
+        // Uncomment the line below to enable auto-advance every 30 seconds
+        // startAutoAdvance(30);
+    </script>
+</body>
+</html>
